@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/49fa56e081.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap" rel="stylesheet">
+
+    <title>Document</title>
+</head>
+<body>
+    <section>
+        <header>
+            <a href="#" class="logo">Logo </a>
+            <div id="toggle" onclick="menuToggle()">
+                <i id="Openicon" class="fa-sharp fa-solid fa-bars"></i>
+            </div>
+            <div id="closeicon" onclick="CloseMenu()">
+                <i  class="fa-solid fa-x"></i>
+            </div>
+        </header>
+        <div class="glass"></div>
+        <div class="content">
+            <h2>BẮC KINH........</h2>
+            <span>cái này ngầu không?</span>
+        </div>
+        <video class="vid" src="production_id_3784197 (1080p).mp4" autoplay muted loop ></video>
+        <div class="sci">
+            <li style="--i:1" ><a href="#"></a>Fb</li>
+            <li style="--i:2" ><a href="#"></a>Twitter</li>
+            <li style="--i:3" ><a href="#"></a>Youtube</li>
+        </div>
+        <ul class="navigation">
+            <li style="--i:1;" ><a href="#">Home</a></li>
+            <li style="--i:2;" ><a href="#">HaHaHA</a></li>
+            <li style="--i:3;" ><a href="#">About</a></li>
+            <li style="--i:4;" ><a href="#">ontact</a></li>
+        </ul>
+    </section>
+    <script>
+        function menuToggle(){
+            var open = document.querySelector("#toggle");
+            var close = document.getElementById("closeicon");
+            var blur = document.querySelector(".glass");
+            var ct = document.querySelector(".content");
+            var menu = document.querySelector(".sci");
+            var nav = document.querySelector(".navigation");
+            nav.classList.toggle("active");
+            menu.classList.toggle("active")
+            ct.classList.toggle("active");
+            open.style.display = "none"; 
+            close.style.display = "block";
+            blur.style.width = "100%";
+            open.classList.content('active');
+
+        }
+
+
+        function CloseMenu(){
+            var open = document.getElementById("toggle")
+            var close = document.getElementById("closeicon")
+            var blur = document.querySelector(".glass")
+            var ct = document.querySelector(".content")
+            var menu = document.querySelector(".sci")
+            var nav = document.querySelector(".navigation");
+            nav.classList.remove("active");
+            menu.classList.remove("active")
+            open.style.display = "block";  
+            close.style.display = "none";
+            blur.style.width = "40%";
+            ct.classList.remove('active');
+
+
+        }
+
+    </script>
+
+</body>
+</html>
